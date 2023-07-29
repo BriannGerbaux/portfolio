@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briann Gerbaux</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Noto+Sans&family=Open+Sans&family=Quicksand&family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="bg-lightblack">
+    <nav class="bg-darkblack mb-20">
+      <div class="w-full laptop:max-w-screen-md xl:max-w-screen-lg mx-auto flex flex-wrap items-center justify-between p-4">
+        <a href="#" class="flex items-center">
+            <img src="assets/ellipse.svg" class="h-8 mr-3" alt="Ellipse logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-lightgrey">Briann GERBAUX</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg laptop:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-fit laptop:block laptop:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 laptop:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 laptop:flex-row laptop:space-x-8 laptop:mt-0 laptop:border-0 dark:bg-darkblack laptop:dark:bg-darkblack dark:border-gray-700">
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded laptop:bg-transparent laptop:text-blue-700 laptop:p-0 dark:text-white laptop:dark:text-blue-500" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 laptop:hover:bg-transparent laptop:border-0 laptop:hover:text-blue-700 laptop:p-0 dark:text-white laptop:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white laptop:dark:hover:bg-transparent">About</a>
+            </li>
+            <li>
+              <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 laptop:hover:bg-transparent laptop:border-0 laptop:hover:text-blue-700 laptop:p-0 dark:text-white laptop:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white laptop:dark:hover:bg-transparent">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="w-10/12 tablet:w-10/12 tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg container rounded-3xl mx-auto bg-darkblack shadow-md">
+        <div class="p-12 tablet:p-14 flex flex-col laptop:flex-row">
+          <div>
+            <h1 class="laptop:whitespace-nowrap laptop:overflow-visible font-mono font-bold text-white mb-9 text-center laptop:text-left laptop:mb-9 xl:mb-14 text-4xl laptop:text-3xl xl:text-5xl">Hello, I am Briann 👋</h1>
+            <p class="text-center laptop:text-left laptop:pr-4 tablet:text-lg laptop:text-xl xl:text-2xl font-sans text-lightgrey">I design and develop websites and mobile applications.<br class="hidden laptop:visible">
+              If you need my services, feel free to contact me.</p>
+            <div class="container bg-gradient-to-r from-lightblue to-darkblue w-4/5 laptop:w-fit rounded-3xl mt-9 mx-auto laptop:mx-0 laptop:mt-9 xl:mt-14">
+              <p class="px-6 py-1 font-sans font-bold text-white text-2xl text-center laptop:text-left laptop:text-xl xl:text-2xl">Contact me</p>
+            </div>
+          </div>
+          <div class="mt-14 laptop:mt-0 self-center">
+            <div class="w-72 laptop:w-52 xl:w-72">
+              <img src="assets/portfolio_hero_img.png" alt="Profile picture">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="w-10/12 tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mt-36 mb-16 mx-auto">
+        <div class="flex items-center">
+          <img class="h-12 mr-3 tablet:h-14 tablet:mr-4 laptop:h-14 laptop:mr-4 xl:h-16 xl:mr-6" src="assets/information.png" alt="About logo">
+          <h1 class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-lightgrey">About me</h1>
+        </div>
+      </div>
+      <div class="w-10/12 tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mx-auto">
+        <div class="space-y-4 tablet:space-y-0 tablet:grid w-full tablet:grid-cols-2 tablet:gap-4">
+          <div class="p-6 tablet:py-9 tablet:px-10 laptop:py-9 laptop:px-10 xl:p-14 h-full container rounded-3xl bg-darkblack shadow-md">
+            <h1 class="mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl tablet:text-3xl xl:text-4xl">My skills</h1>
+            <p class="my-4 text-center text-lightgrey font-mono text-base laptop:text-lg xl:text-xl">I am a fullstack developer and a mobile programmer.
+              Check out my tech stack and the tools I use.</p>
+            <hr class="mt-9 tablet:mt-12 mx-5 border-t">
+            <div class="flex flex-col h-full">
+              <div class="pt-9 tablet:pt-16 laptop:pt-16 xl:pt-24 h-fit">
+                <div class="flex justify-center items-center">
+                  <div class="shrink-0 basis-1/3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/html logo.png" alt="Html logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">HTML</figcaption>
+                  </div>
+                  <div class="shrink-0 basis-1/3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/css logo.png" alt="Css logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">CSS</figcaption>
+                  </div>
+                  <div class="shrink-0 basis-1/3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/javascript logo.png" alt="javascript logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">Javascript</figcaption>
+                  </div>
+                </div>
+                <div class="flex justify-center mt-6">
+                  <div class="shrink-0 basis-1/4 tablet:m-2 xl:m-3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/tailwind logo.png" alt="tailwind logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">Tailwind</figcaption>
+                  </div>
+                  <div class="shrink-0 basis-1/4 tablet:m-2 xl:m-3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/nodejs logo.png" alt="nodejs logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">NodeJS</figcaption>
+                  </div>
+                  <div class="shrink-0 basis-1/4 tablet:m-2 xl:m-3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/flutter logo.png" alt="flutter logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">Flutter</figcaption>
+                  </div>
+                  <div class="shrink-0 basis-1/4 tablet:m-2 xl:m-3">
+                    <img class="h-14 tablet:h-10 laptop:h-12 xl:h-20 mx-auto object-contain" src="assets/figma logo.png" alt="figma logo">
+                    <figcaption class="text-base tablet:text-sm laptop:text-lg xl:text-xl mt-2 text-center text-lightgrey font-mono">Figma</figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tablet:h-full flex flex-col gap-4">
+            <div class="h-fit tablet:h-fit p-6 xl:p-14 container rounded-3xl bg-darkblack shadow-md">
+              <h1 class="text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl tablet:text-3xl xl:text-4xl">My formation</h1>
+              <p class="my-4 text-center text-lightgrey font-mono text-base tablet:text-base laptop:text-lg xl:text-xl">I am a 5th year student at Epitech Paris and
+                I studied abroad in South Korea at Chung-Ang university</p>
+              <div class="mx-auto px-4 w-4/5">
+                <img class="object-contain" src="assets/portfolio_school_logo.png" alt="school logo">
+              </div>
+            </div>
+            <div class="h-full p-6 tablet:p-9 xl:p-14 container rounded-3xl bg-darkblack shadow-md">
+              <h1 class="text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl xl:text-4xl">My projects</h1>
+              <div class="my-5 text-center overflow-visible max-w-prose">
+                <a class="text-lightgrey font-mono text-base laptop:text-lg xl:text-xl hover:underline" href="#">
+                    Showcase website for Hygie <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue">></span>
+                </a>
+              </div>
+              <div class="my-5 text-center overflow-visible max-w-prose ">
+                <a class="text-lightgrey font-mono text-base laptop:text-lg xl:text-xl hover:underline" href="#">
+                  Mobile demo application <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue">></span>
+              </a>
+              </div>
+              <div class="mt-5 text-center overflow-visible max-w-prose ">
+                <a class="text-lightgrey font-mono text-base laptop:text-lg xl:text-xl hover:underline" href="#">
+                  Zappy-like website and application <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue">></span>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="w-10/12 tablet:w-auto tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mt-36 mb-16 mx-auto">
+        <div class="flex items-center">
+          <img class="w-12 mr-2 tablet:w-14 tablet:mr-2 laptop:w-14 laptop:mr-4 xl:w-16 xl:mr-6" src="assets/e-mail.png" alt="Contact logo">
+          <h1 class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-lightgrey">Contact</h1>
+        </div>
+      </div>
+      <div class="w-10/12 tablet:w-auto tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg container rounded-3xl mx-auto bg-darkblack shadow-md">
+        <div class="p-9">
+          <p class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-lightgrey">
+            If you are interested and want to know more about me, you can checkout my Linkedin and Github pages.
+            If you want to hire me or contact me. Send me an email to my address below 😄
+          </p>
+        </div>
+        <div class="p-9">
+          <div class="flex pb-9">
+            <div class="mr-9">
+              <img class="w-10 tablet:w-12 laptop:w-14 xl:w-16" src="assets/outlook_logo.png" alt="Outlook logo">
+            </div>
+            <div class="py-auto">
+              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-lightgrey">My professional email address:</h2>
+              <a class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-blue underline hover:no-underline" href="mailto: briann.gerbaux@outlook.fr">briann.gerbaux@outlook.fr</a>
+            </div>
+          </div>
+          <div class="flex pb-9">
+            <div class="mr-9">
+              <img class="w-10 tablet:w-12 laptop:w-14 xl:w-16" src="assets/linkedin_logo.png" alt="Outlook logo">
+            </div>
+            <div class="py-auto">
+              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-lightgrey">My LinkedIn page:</h2>
+              <a class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-blue underline hover:no-underline" href="www.linkedin.com/in/brianngerbaux">www.linkedin.com/in/brianngerbaux</a>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="mr-9">
+              <img class="w-10 tablet:w-12 laptop:w-14 xl:w-16" src="assets/github_logo.png" alt="Outlook logo">
+            </div>
+            <div class="py-auto">
+              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-lightgrey">My Github account:</h2>
+              <a class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-blue underline hover:no-underline" href="https://github.com/BriannGerbaux">https://github.com/BriannGerbaux</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-darkblack">
+      <div class="mt-48 w-full mx-auto max-w-screen-2xl">
+          <p class="py-9 tablet:text-lg xl:text-xl text-center font-mono text-lightgrey">© Briann GERBAUX 2023. Copyright</p>
+          <p class="pb-9 tablet:text-lg xl:text-xl text-center font-mono text-lightgrey">
+            "About me" and "Contact" sections logo respectively designed<br>
+            by <span class="italic">200degrees</span> and <span class="italic">iconixar</span>
+          </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
