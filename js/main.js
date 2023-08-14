@@ -39,6 +39,65 @@ checkbox.addEventListener("change", () => {
 
 themeCheck();
 
+// ------------------------------- Language dropdown button -----------------------
+
+const dropDownButton = document.querySelector("#dropdownButton");
+const dropdownList = document.querySelector(".dropdown-content");
+dropDownButton.addEventListener("click", () => {
+  dropdownList.classList.toggle("hidden");
+});
+
+
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('#dropdownButton')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (!openDropdown.classList.contains('hidden')) {
+        openDropdown.classList.add('hidden');
+      }
+    }
+  }
+}
+
+// ------------------------------- Language handling ------------------------------
+
+// function changeLanguage() {
+//   var frTexts = document.querySelectorAll(".fr");
+//   frTexts.forEach(function (frText) {
+//     frText.classList.toggle("hidden");
+//   });
+//   var enTexts = document.querySelectorAll(".en");
+//   enTexts.forEach(function (enText) {
+//     enText.classList.toggle("hidden");
+//   });
+// }
+
+function changeLanguageToFrench() {
+  var frTexts = document.querySelectorAll(".fr");
+  frTexts.forEach(function (frText) {
+    frText.classList.remove("hidden");
+  });
+  var enTexts = document.querySelectorAll(".en");
+  enTexts.forEach(function (enText) {
+    enText.classList.add("hidden");
+  });
+}
+
+function changeLanguageToEnglish() {
+  var frTexts = document.querySelectorAll(".fr");
+  frTexts.forEach(function (frText) {
+    frText.classList.add("hidden");
+  });
+  var enTexts = document.querySelectorAll(".en");
+  enTexts.forEach(function (enText) {
+    enText.classList.remove("hidden");
+  });
+}
+
 // ------------------------------- Navigation -------------------------------------
 
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -63,6 +122,11 @@ function scrollToAbout() {
   window.scroll({top: contactPosition - 10, behavior: "smooth"});
 }
 
+function scrollToProjects() {
+  var contactPosition = findPosition(document.getElementById("projects"));
+  window.scroll({top: contactPosition - 10, behavior: "smooth"});
+}
+
 function scrollToContact() {
   var contactPosition = findPosition(document.getElementById("contact"));
   window.scroll({top: contactPosition - 10, behavior: "smooth"});
@@ -77,6 +141,12 @@ function mobileScrollToHome() {
 function mobileScrollToAbout() {
   mobileMenu.classList.toggle("hidden");
   var contactPosition = findPosition(document.getElementById("about"));
+  window.scroll({top: contactPosition - 10, behavior: "smooth"});
+}
+
+function mobileScrollToProjects() {
+  mobileMenu.classList.toggle("hidden");
+  var contactPosition = findPosition(document.getElementById("projects"));
   window.scroll({top: contactPosition - 10, behavior: "smooth"});
 }
 

@@ -25,26 +25,79 @@
                 <span class="font-semibold text-black dark:text-lightgrey text-lg">Briann Gerbaux</span>
               </a>
             </div>
-            <div class="flex items-center justify-center w-fit">
-              <label for="toggleB" class="flex items-center cursor-pointer">
-                <div class="relative">
-                  <input type="checkbox" id="toggleB" class="sr-only">
-                  <div class="block bg-lightblack w-14 h-8 rounded-full"></div>
-                  <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition">
-                    <div class="w-full h-full flex items-center justify-center">
-                        <img src="assets/mode-jour.png" class="w-3/4 toggle-button-day-image" alt="Day mode">
-                        <img src="assets/mode-nuit.png" class="w-3/4 toggle-button-night-image" alt="Night mode">
-                    </div>
+            <div class="flex justify-center items-center space-x-3">
+              <div>
+                <button id="dropdownButton" class="flex justify-center items-center px-4 py-2 rounded-md hover:bg-white hover:dark:bg-lightblack" type="button">
+                  <span class="en hidden pointer-events-none">
+                    <img class="w-6" src="assets/english_flag.png">
+                  </span>
+                  <span class="fr pointer-events-none">
+                    <img class="w-6" src="assets/french_flag.png">
+                  </span>
+                  <span class="ml-2 w-2 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5 text-darkblack dark:text-white">
+                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="dropdown-content hidden">
+                  <div class="absolute z-[1000] w-fit mt-3 rounded-b-md bg-gradient-to-b from-darkblack to-lightblack dark:from-white dark:to-lightgrey">
+                    <a onclick="changeLanguageToEnglish()" class="block w-full px-4 py-2 font-mono disabled:pointer-events-none text-white dark:text-lightblack hover:bg-neutral-700 dark:hover:bg-neutral-300" href="#">
+                      <div class="flex items-center space-x-3 w-fit">
+                          <img class="w-6" src="assets/english_flag.png">
+                          <p class="font-base font-mono text-white dark:text-lightblack">English</p>
+                      </div>
+                    </a>
+                    <a onclick="changeLanguageToFrench()" class="block w-full px-4 py-2 font-mono rounded-b-md disabled:pointer-events-none text-white dark:text-lightblack hover:bg-neutral-700 dark:hover:bg-neutral-300" href="#">
+                      <div class="flex items-center space-x-3 w-fit">
+                        <img class="w-6" src="assets/french_flag.png">
+                        <p class="font-base font-mono">Français</p>
+                      </div>
+                    </a>
                   </div>
                 </div>
-              </label>
-            
+              </div>
+              <div class="flex items-center justify-center w-fit">
+                <label for="toggleB" class="flex items-center cursor-pointer">
+                  <div class="relative">
+                    <input type="checkbox" id="toggleB" class="sr-only">
+                    <div class="block bg-lightblack w-14 h-8 rounded-full"></div>
+                    <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition">
+                      <div class="w-full h-full flex items-center justify-center">
+                          <img src="assets/mode-jour.png" class="w-3/4 toggle-button-day-image" alt="Day mode">
+                          <img src="assets/mode-nuit.png" class="w-3/4 toggle-button-night-image" alt="Night mode">
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
             </div>
             <!-- Primary Navbar items -->
             <div class="hidden laptop:flex items-center space-x-1">
-              <button onclick="scrollToHome()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack"><p class="text-black dark:text-lightgrey font-semibold">Home</p></button>
-              <button onclick="scrollToAbout()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack"><p class="text-black dark:text-lightgrey font-semibold">About</p></button>
-              <button onclick="scrollToContact()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack"><p class="text-black dark:text-lightgrey font-semibold">Contact</p></button>
+              <button onclick="scrollToHome()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack">
+                <p class="text-black dark:text-lightgrey font-semibold">
+                  <span class="fr">Acceuil</span>
+                  <span class="en hidden">Home</span>
+                </p>
+              </button>
+              <button onclick="scrollToAbout()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack">
+                <p class="text-black dark:text-lightgrey font-semibold">
+                  <span class="fr">A propos</span>
+                  <span class="en hidden">About</span>
+                </p>
+              </button>
+              <button onclick="scrollToProjects()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack">
+                <p class="text-black dark:text-lightgrey font-semibold">
+                  <span class="fr">Projets</span>
+                  <span class="en hidden">Projects</span>
+                </p>
+              </button>
+              <button onclick="scrollToContact()" class="h-fit w-fit py-2 px-4 rounded-md hover:bg-white hover:dark:bg-lightblack">
+                <p class="text-black dark:text-lightgrey font-semibold">
+                  <span class="fr">Contacts</span>
+                  <span class="hidden en">Contact</span>
+                </p>
+              </button>
             </div>
             <!-- Mobile menu button -->
             <div class="laptop:hidden flex items-center">
@@ -72,21 +125,36 @@
               <li class="active">
                 <button onclick="mobileScrollToHome()" class="block w-full px-2 py-4">
                   <div class="text-sm font-mono text-black dark:text-lightgrey">
-                    <span class="text-lightblue">1. </span>Home
+                    <span class="text-lightblue">1. </span>
+                    <span class="en hidden">Home</span>
+                    <span class="fr">Acceuil</span>
                   </div>
                 </button>
               </li>
               <li>
                 <button onclick="mobileScrollToAbout()" class="block w-full px-2 py-4">
                   <div class="text-sm font-mono text-black dark:text-lightgrey">
-                    <span class="text-lightblue">2. </span>About
+                    <span class="text-lightblue">2. </span>
+                    <span class="en hidden">About</span>
+                    <span class="fr">A propos</span>
+                  </div>
+                </button>
+              </li>
+              <li>
+                <button onclick="mobileScrollToProjects()" class="block w-full px-2 py-4">
+                  <div class="text-sm font-mono text-black dark:text-lightgrey">
+                    <span class="text-lightblue">3. </span>
+                    <span class="en hidden">Projects</span>
+                    <span class="fr">Projets</span>
                   </div>
                 </button>
               </li>
               <li>
                 <button onclick="mobileScrollToContact()" class="block w-full px-2 py-4">
                   <div class="text-sm font-mono text-black dark:text-lightgrey">
-                    <span class="text-lightblue">3. </span>Contact
+                    <span class="text-lightblue">4. </span>
+                    <span class="en hidden">Contact</span>
+                    <span class="fr">Contacts</span>
                   </div>
                 </button>
               </li>
@@ -100,12 +168,23 @@
       <div id="home" class="w-10/12 tablet:w-10/12 tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg container rounded-3xl mx-auto bg-grey dark:bg-darkblack shadow-md motion-safe:animate-scrollAnimation">
         <div class="p-12 tablet:p-14 flex flex-col laptop:flex-row">
           <div>
-            <h1 class="laptop:whitespace-nowrap laptop:overflow-visible font-mono font-bold text-black dark:text-white mb-9 text-center laptop:text-left laptop:mb-9 xl:mb-14 text-4xl laptop:text-3xl xl:text-5xl">Hello, I am Briann 👋</h1>
-            <p class="text-center laptop:text-left laptop:pr-4 tablet:text-lg laptop:text-xl xl:text-2xl font-sans text-lightblack dark:text-lightgrey">I design and develop websites and mobile applications.<br class="hidden laptop:visible">
-              If you need my services, feel free to contact me.</p>
+            <h1 class="laptop:whitespace-nowrap laptop:overflow-visible font-mono font-bold text-black dark:text-white mb-9 text-center laptop:text-left laptop:mb-9 xl:mb-14 text-4xl laptop:text-3xl xl:text-5xl">
+              <span class="en hidden">Hello, I am Briann 👋</span>
+              <span class="fr leading-snug">Bonjour,<br> je suis Briann 👋</span>
+            </h1>
+            <p class="text-center laptop:text-left laptop:pr-4 tablet:text-lg laptop:text-xl xl:text-2xl font-sans text-lightblack dark:text-lightgrey">
+              <span class="fr">Je concois et programme des sites internet ainsi que des applications mobile.</span>
+              <span class="en hidden">I design and develop websites and mobile applications.<br class="hidden laptop:inline"></span>
+              <span class="fr">Si vous avez besoins de mes services. N'hésitez pas à me contacter.</span>
+              <span class="en hidden">If you need my services, feel free to contact me.</span>
+
+            </p>
             <div class="flex justify-center bg-gradient-to-r from-lightblue to-darkblue w-4/5 rounded-3xl mt-9 mx-auto laptop:mx-0 laptop:mt-9 laptop:w-fit xl:mt-14">
               <button onclick="scrollToContact()" class="w-full contact-button">
-                <p class="px-6 py-2 font-sans text-grey text-2xl text-center laptop:text-left laptop:text-xl xl:text-2xl">Contact me</p>
+                <p class="px-6 py-2 font-sans text-grey text-2xl text-center laptop:text-left laptop:text-xl xl:text-2xl">
+                  <span class="en hidden">Contact me</span>
+                  <span class="fr">Me contactez</span>
+                </p>
               </button>
             </div>
           </div>
@@ -121,15 +200,23 @@
       <div class="w-10/12 tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mt-36 mb-16 mx-auto">
         <div class="flex items-center">
           <img class="h-12 mr-3 tablet:h-14 tablet:mr-4 laptop:h-14 laptop:mr-4 xl:h-16 xl:mr-6" src="assets/information.png" alt="About logo">
-          <h1 id="about" class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-black dark:text-lightgrey">About me</h1>
+          <h1 id="about" class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-black dark:text-lightgrey">
+            <span class="en hidden">About me</span>
+            <span class="fr">A propos</span>
+          </h1>
         </div>
       </div>
       <div class="w-10/12 tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mx-auto motion-safe:animate-scrollAnimation js-show-on-scroll">
         <div class="space-y-4 tablet:space-y-0 tablet:grid w-full tablet:grid-cols-2 tablet:gap-4">
           <div class="p-6 tablet:py-9 tablet:px-10 laptop:py-9 laptop:px-10 xl:p-14 h-full container rounded-3xl bg-grey dark:bg-darkblack shadow-md motion-safe:animate-scrollAnimation js-show-on-scroll">
-            <h1 class="mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl tablet:text-3xl xl:text-4xl">My skills</h1>
-            <p class="my-4 text-center text-black dark:text-lightgrey font-mono text-base laptop:text-lg xl:text-xl">I am a fullstack developer and a mobile programmer.
-              Check out my tech stack and the tools I use.</p>
+            <h1 class="mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl tablet:text-3xl xl:text-4xl">
+              <span class="en hidden">My skills</span>
+              <span class="fr">Mes compétences</span>
+            </h1>
+            <p class="my-4 text-center text-black dark:text-lightgrey font-mono text-base laptop:text-lg xl:text-xl">
+              <span class="en hidden">I am a fullstack developer and a mobile programmer. Check out my tech stack and the tools I use.</span>
+              <span class="fr">Je suis un développeur web "fullstack" ainsi qu'un programmeur d'application mobile. Je maîtrise les outils et technologies indiquées ci-dessous</span>
+            </p>
             <hr class="mt-9 tablet:mt-12 mx-5 border-t">
             <div class="flex flex-col h-full">
               <div class="pt-9 tablet:pt-16 laptop:pt-16 xl:pt-24 h-fit">
@@ -170,9 +257,14 @@
           </div>
           <div class="tablet:h-full flex flex-col gap-4">
             <div class="h-fit tablet:h-fit p-6 xl:p-14 container rounded-3xl bg-grey dark:bg-darkblack shadow-md">
-              <h1 class="text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl tablet:text-3xl xl:text-4xl">My formation</h1>
-              <p class="my-4 text-center text-black dark:text-lightgrey font-mono text-base tablet:text-base laptop:text-lg xl:text-xl">I am a 5th year student at Epitech Paris and
-                I studied abroad in South Korea at Chung-Ang university</p>
+              <h1 class="text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl tablet:text-3xl xl:text-4xl">
+                <span class="en hidden">My formation</span>
+                <span class="fr">Ma formation</span>
+              </h1>
+              <p class="my-4 text-center text-black dark:text-lightgrey font-mono text-base tablet:text-base laptop:text-lg xl:text-xl">
+                <span class="en hidden">I am a 5th year student at Epitech Paris and I studied abroad in South Korea at Chung-Ang university</span>
+                <span class="fr">Je suis étudiant en 5ème année à Epitech Paris, j'ai également étudié à l'étranger pendant un an en Corée du Sud dans l'université Chung-Ang</span>
+              </p>
               <div class="hidden dark:inline mx-auto px-4 w-4/5">
                 <img class="object-contain" src="assets/portfolio_school_logo.png" alt="school logo">
               </div>
@@ -181,20 +273,29 @@
               </div>
             </div>
             <div class="h-full p-6 tablet:p-9 xl:p-14 container rounded-3xl bg-grey dark:bg-darkblack shadow-md">
-              <h1 class="text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl xl:text-4xl">My projects</h1>
+              <h1 class="text-center text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl xl:text-4xl">
+                <span class="en hidden">My projects</span>
+                <span class="fr">Mes projets</span>
+              </h1>
               <div class="my-5 text-center overflow-visible max-w-prose">
                 <a class="text-black dark:text-lightgrey font-mono text-base laptop:text-lg xl:text-xl hover:underline" href="#">
-                    Showcase website for Hygie <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue">></span>
+                  <span class="fr">Site internet vitrine de Hygie</span>
+                  <span class="en hidden">Showcase website for Hygie</span>
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue"> ></span>
                 </a>
               </div>
               <div class="my-5 text-center overflow-visible max-w-prose ">
                 <a class="text-black dark:text-lightgrey font-mono text-base laptop:text-lg xl:text-xl hover:underline" href="#">
-                  Mobile demo application <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue">></span>
+                  <span class="en hidden">Mobile demo application</span>
+                  <span class="fr">Application mobile de demonstration</span>
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue"> ></span>
               </a>
               </div>
               <div class="mt-5 text-center overflow-visible max-w-prose ">
                 <a class="text-black dark:text-lightgrey font-mono text-base laptop:text-lg xl:text-xl hover:underline" href="#">
-                  Zappy-like website and application <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue">></span>
+                  <span class="en hidden">Zappy-like website and application</span>
+                  <span class="fr">Site internet et application mobile Zappy-like</span>
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue"> ></span>
               </a>
               </div>
             </div>
@@ -203,17 +304,85 @@
       </div>
     </section>
     <section>
+      <div id="projects" class="w-10/12 tablet:w-auto tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mt-36 mb-16 mx-auto">
+        <div class="flex items-center">
+          <img class="contact-section w-12 mr-2 tablet:w-14 tablet:mr-2 laptop:w-14 laptop:mr-4 xl:w-16 xl:mr-6" src="assets/rocket.png" alt="Rocket logo">
+          <h1 class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-black dark:text-lightgrey">
+            <span class="en hidden">Projects</span>
+            <span class="fr">Projets</span>
+          </h1>
+        </div>
+      </div>
+      <div class="w-10/12 mx-auto tablet:w-auto tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg motion-safe:animate-scrollAnimation js-show-on-scroll">
+        <div class="p-6 tablet:py-9 tablet:px-10 laptop:py-9 laptop:px-10 xl:p-14 container rounded-3xl mx-auto bg-grey dark:bg-darkblack shadow-md motion-safe:animate-scrollAnimation js-show-on-scroll">
+          <div>
+            <h1 class="text-center tablet:text-start text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl xl:text-4xl">Ijoo</h1>
+            <p class="mt-10 mb-8 text-center tablet:text-start text-black dark:text-lightgrey font-mono text-base tablet:text-base laptop:text-lg xl:text-xl">
+              <span class="en hidden">
+                Ijoo is an online website to purchase trips in Korea. This personal project is made of an API made in NodeJS and a MongoDB database.
+                The frontend is made in ReactJS with TailwindCSS. You can check out the frontend code
+                <a href="https://github.com/BriannGerbaux/Ijoo-Frontend" class="underline text-blue hover:no-underline">here</a>
+                or the backend code <a href="https://github.com/BriannGerbaux/Ijoo-Backend" class="underline text-blue hover:no-underline">here</a>.
+              </span>
+              <span class="fr">
+                Ijoo est un site en ligne de vente de voyage en Corée du Sud. Ce projet personnel est composé d'un API faite en NodeJS et une base de donnée MongoDB.
+                Le site est fait en ReactJS et TailwindCSS. Vous pouvez accéder au code du site internet 
+                <a href="https://github.com/BriannGerbaux/Ijoo-Frontend" class="underline text-blue hover:no-underline">ici</a>
+                ou le code de l'API <a href="https://github.com/BriannGerbaux/Ijoo-Backend" class="underline text-blue hover:no-underline">ici</a>.
+              </span>
+            </p>
+          </div>
+          <div>
+            <img class="w-full object-contain" src="assets/browser_frame.png" alt="browser frame">
+            <video class="rounded-b-sm tablet:rounded-b laptop:rounded-b-lg shadow-lg" autoplay loop muted>
+              <source class="" src="assets/ijoo_demo_video.webm" type="video/webm" />
+            </video>
+          </div>
+        </div>
+        <div class="mt-12 p-6 tablet:py-9 tablet:px-10 laptop:py-9 laptop:px-10 xl:p-14 container rounded-3xl mx-auto bg-grey dark:bg-darkblack shadow-md motion-safe:animate-scrollAnimation js-show-on-scroll">
+          <div >
+            <h1 class="text-center tablet:text-start text-transparent bg-clip-text bg-gradient-to-r from-lightblue to-darkblue font-mono text-3xl xl:text-4xl">Hygie</h1>
+            <p class="mt-10 mb-8 text-center tablet:text-start text-black dark:text-lightgrey font-mono text-base tablet:text-base laptop:text-lg xl:text-xl">
+              <span class="en hidden">
+                This Hygie's showcase website. Hygie is my big project that I have been developping for 2 years with classmates.<br>
+                This website is made out of pure HTML and CSS. Check it out <a href="https://hygie-eip.com" class="underline text-blue hover:no-underline">here</a>
+              </span>
+              <span class="fr">
+                Ceci est le site vitrine de Hygie. Hygie est mon projet que je développe depuis 2 ans avec d'autres étudiants de mon école.<br>
+                Ce site a été développé en pur HTML et CSS. Cliquez <a href="https://hygie-eip.com" class="underline text-blue hover:no-underline">ici</a> pour y accéder.
+              </span>
+            </p>
+          </div>
+          <div>
+            <img class="w-full object-contain" src="assets/browser_frame.png" alt="browser frame">
+            <video class="rounded-b-sm tablet:rounded-b laptop:rounded-b-lg shadow-lg" autoplay loop muted>
+              <source class="" src="assets/hygie_demo_video.webm" type="video/webm" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
       <div id="contact" class="w-10/12 tablet:w-auto tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg mt-36 mb-16 mx-auto">
         <div class="flex items-center">
           <img class="contact-section w-12 mr-2 tablet:w-14 tablet:mr-2 laptop:w-14 laptop:mr-4 xl:w-16 xl:mr-6" src="assets/e-mail.png" alt="Contact logo">
-          <h1 class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-black dark:text-lightgrey">Contact</h1>
+          <h1 class="text-3xl tablet:text-4xl laptop:text-5xl xl:text-6xl font-mono text-black dark:text-lightgrey">
+            <span class="en hidden">Contact</span>
+            <span class="fr">Contacts</span>
+          </h1>
         </div>
       </div>
       <div class="w-10/12 tablet:w-auto tablet:max-w-screen-sm laptop:max-w-screen-md xl:max-w-screen-lg container rounded-3xl mx-auto bg-grey dark:bg-darkblack shadow-md motion-safe:animate-scrollAnimation js-show-on-scroll">
         <div class="p-9">
           <p class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">
-            If you are interested and want to know more about me, you can checkout my Linkedin and Github pages.
-            If you want to hire me or contact me. Send me an email to my address below 😄
+            <span class="en hidden">
+              If you are interested and want to know more about me, you can checkout my Linkedin and Github pages.
+              If you want to hire me or contact me. Send me an email to my address below 😄
+            </span>
+            <span class="fr">
+              Si vous êtes intéressé et que vous voulez en savoir plus à mon propos, je vous invite à regarder ma page Github ainsi que LinkedIn.
+              Si vous avez besoin de mes services ou que vous voulez me contacter, veuillez m'envoyer un e-mail à mon adresse située ci-dessous 😄.
+            </span>
           </p>
         </div>
         <div class="p-9">
@@ -222,7 +391,10 @@
               <img class="w-10 tablet:w-12 laptop:w-14 xl:w-16" src="assets/outlook_logo.png" alt="Outlook logo">
             </div>
             <div class="py-auto">
-              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">My professional email address:</h2>
+              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">
+                <span class="en hidden">My professional e-mail address:</span>
+                <span class="fr">Mon adresse e-mail professionnelle:</span>
+              </h2>
               <a class="block text-base break-all tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-blue underline hover:no-underline" href="mailto: briann.gerbaux@outlook.fr">briann.gerbaux@outlook.fr</a>
             </div>
           </div>
@@ -231,7 +403,10 @@
               <img class="w-10 tablet:w-12 laptop:w-14 xl:w-16" src="assets/linkedin_logo.png" alt="Linkedin logo">
             </div>
             <div class="py-auto">
-              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">My LinkedIn page:</h2>
+              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">
+                <span class="en hidden">My LinkedIn page:</span>
+                <span class="fr">Ma page LinkedIn:</span>
+              </h2>
               <a class="block text-base break-all tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-blue underline hover:no-underline" href="www.linkedin.com/in/brianngerbaux">www.linkedin.com/in/brianngerbaux</a>
             </div>
           </div>
@@ -243,7 +418,10 @@
               <img class="w-10 tablet:w-12 laptop:w-14 xl:w-16" src="assets/github-noir.png" alt="Github Logo noir">
             </div>
             <div class="py-auto">
-              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">My Github account:</h2>
+              <h2 class="text-base tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-black dark:text-lightgrey">
+                <span class="en hidden">My Github account:</span>
+                <span class="fr">Mon compte Github:</span>
+              </h2>
               <a class="block text-base break-all tablet:text-lg laptop:text-xl xl:text-2xl font-mono text-blue underline hover:no-underline" href="https://github.com/BriannGerbaux">https://github.com/BriannGerbaux</a>
             </div>
           </div>
@@ -255,7 +433,8 @@
           <p class="py-9 tablet:text-lg xl:text-xl text-center font-mono text-black dark:text-lightgrey">© Briann GERBAUX 2023. Copyright</p>
           <p class="pb-9 tablet:text-lg xl:text-xl text-center font-mono text-black dark:text-lightgrey">
             "About me" and "Contact" sections logo respectively designed<br>
-            by <span class="italic">200degrees</span> and <span class="italic">iconixar</span>
+            by <span class="italic">200degrees</span> and <span class="italic">iconixar</span>.
+            <a target="_blank" href="https://icons8.com/icon/PE2IKfGomzYd/fus%C3%A9e"> Fusée</a> icon by <a class="italic" target="_blank" href="https://icons8.com">Icons8</a>
           </p>
       </div>
     </footer>
